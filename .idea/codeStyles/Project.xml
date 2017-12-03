@@ -1,75 +1,70 @@
 <component name="ProjectCodeStyleConfiguration">
   <code_scheme name="Project" version="173">
+    <CssCodeStyleSettings>
+      <option name="HEX_COLOR_UPPER_CASE" value="true" />
+      <option name="HEX_COLOR_LONG_FORMAT" value="true" />
+      <option name="VALUE_ALIGNMENT" value="1" />
+      <option name="KEEP_SINGLE_LINE_BLOCKS" value="true" />
+    </CssCodeStyleSettings>
+    <HTMLCodeStyleSettings>
+      <option name="HTML_ATTRIBUTE_WRAP" value="4" />
+      <option name="HTML_ALIGN_TEXT" value="true" />
+      <option name="HTML_SPACE_INSIDE_EMPTY_TAG" value="true" />
+      <option name="HTML_DO_NOT_INDENT_CHILDREN_OF" value="thead,tbody,tfoot" />
+      <option name="HTML_ENFORCE_QUOTES" value="true" />
+    </HTMLCodeStyleSettings>
     <PHPCodeStyleSettings>
       <option name="INDENT_CODE_IN_PHP_TAGS" value="true" />
+      <option name="ALIGN_KEY_VALUE_PAIRS" value="true" />
+      <option name="ALIGN_PHPDOC_PARAM_NAMES" value="true" />
+      <option name="ALIGN_PHPDOC_COMMENTS" value="true" />
+      <option name="ALIGN_ASSIGNMENTS" value="true" />
+      <option name="COMMA_AFTER_LAST_ARRAY_ELEMENT" value="true" />
+      <option name="PHPDOC_BLANK_LINE_BEFORE_TAGS" value="true" />
+      <option name="PHPDOC_BLANK_LINES_AROUND_PARAMETERS" value="true" />
+      <option name="PHPDOC_WRAP_LONG_LINES" value="true" />
+      <option name="LOWER_CASE_BOOLEAN_CONST" value="true" />
+      <option name="LOWER_CASE_NULL_CONST" value="true" />
+      <option name="ELSE_IF_STYLE" value="SEPARATE" />
+      <option name="VARIABLE_NAMING_STYLE" value="SNAKE_CASE" />
+      <option name="BLANK_LINES_BEFORE_RETURN_STATEMENT" value="1" />
+      <option name="SPACES_AROUND_VAR_WITHIN_BRACKETS" value="true" />
+      <option name="SPACE_BEFORE_UNARY_NOT" value="true" />
+      <option name="SPACE_AFTER_UNARY_NOT" value="true" />
+      <option name="FORCE_SHORT_DECLARATION_ARRAY_STYLE" value="true" />
+      <option name="SPACE_BEFORE_COLON_IN_RETURN_TYPE" value="true" />
     </PHPCodeStyleSettings>
     <codeStyleSettings language="PHP">
-      <arrangement>
-        <rules>
-          <section>
-            <rule>
-              <match>
-                <CONST>true</CONST>
-              </match>
-              <order>BY_NAME</order>
-            </rule>
-          </section>
-          <section>
-            <rule>
-              <match>
-                <AND>
-                  <FIELD>true</FIELD>
-                  <modifiers />
-                </AND>
-              </match>
-              <order>BY_NAME</order>
-            </rule>
-          </section>
-          <section>
-            <rule>
-              <match>
-                <CONSTRUCTOR>true</CONSTRUCTOR>
-              </match>
-              <order>BY_NAME</order>
-            </rule>
-          </section>
-          <section>
-            <rule>
-              <match>
-                <AND>
-                  <METHOD>true</METHOD>
-                  <modifiers />
-                </AND>
-              </match>
-              <order>BY_NAME</order>
-            </rule>
-          </section>
-          <section>
-            <rule>
-              <match>
-                <TRAIT>true</TRAIT>
-              </match>
-              <order>BY_NAME</order>
-            </rule>
-          </section>
-          <section>
-            <rule>
-              <match>
-                <INTERFACE>true</INTERFACE>
-              </match>
-              <order>BY_NAME</order>
-            </rule>
-          </section>
-          <section>
-            <rule>
-              <match>
-                <CLASS>true</CLASS>
-              </match>
-              <order>BY_NAME</order>
-            </rule>
-          </section>
-        </rules>
-      </arrangement>
+      <option name="LINE_COMMENT_AT_FIRST_COLUMN" value="false" />
+      <option name="LINE_COMMENT_ADD_SPACE" value="true" />
+      <option name="ALIGN_MULTILINE_CHAINED_METHODS" value="true" />
+      <option name="ALIGN_MULTILINE_PARAMETERS_IN_CALLS" value="true" />
+      <option name="ALIGN_MULTILINE_TERNARY_OPERATION" value="true" />
+      <option name="ALIGN_MULTILINE_ARRAY_INITIALIZER_EXPRESSION" value="true" />
+      <option name="SPACE_WITHIN_PARENTHESES" value="true" />
+      <option name="SPACE_WITHIN_METHOD_CALL_PARENTHESES" value="true" />
+      <option name="SPACE_WITHIN_METHOD_PARENTHESES" value="true" />
+      <option name="SPACE_WITHIN_IF_PARENTHESES" value="true" />
+      <option name="SPACE_WITHIN_WHILE_PARENTHESES" value="true" />
+      <option name="SPACE_WITHIN_FOR_PARENTHESES" value="true" />
+      <option name="SPACE_WITHIN_CATCH_PARENTHESES" value="true" />
+      <option name="SPACE_WITHIN_SWITCH_PARENTHESES" value="true" />
+      <option name="SPACE_WITHIN_BRACKETS" value="true" />
+      <option name="SPACE_WITHIN_ARRAY_INITIALIZER_BRACES" value="true" />
+      <option name="SPACE_AFTER_TYPE_CAST" value="true" />
+      <option name="SPACE_BEFORE_METHOD_PARENTHESES" value="true" />
+      <option name="CALL_PARAMETERS_WRAP" value="5" />
+      <option name="METHOD_CALL_CHAIN_WRAP" value="5" />
+      <option name="TERNARY_OPERATION_WRAP" value="5" />
+      <option name="TERNARY_OPERATION_SIGNS_ON_NEXT_LINE" value="true" />
+      <option name="KEEP_SIMPLE_METHODS_IN_ONE_LINE" value="true" />
+      <option name="ARRAY_INITIALIZER_WRAP" value="5" />
+      <option name="PLACE_ASSIGNMENT_SIGN_ON_NEXT_LINE" value="true" />
+    </codeStyleSettings>
+    <codeStyleSettings language="PostCSS">
+      <indentOptions>
+        <option name="INDENT_SIZE" value="4" />
+      </indentOptions>
     </codeStyleSettings>
   </code_scheme>
 </component>
