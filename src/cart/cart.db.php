@@ -1,10 +1,10 @@
 <?php
 
-    function login ( $album_id, $track_name, $track_length, $position_on_album )
+    function get_cart ()
     {
-        $conn = $this->dbconnect();
+        /* User cart from get */
 
-        // TODO : Create login sessions
+        // $conn = $this->dbconnect();
 
         // return $this->query($sql, $conn);
     }
