@@ -1,4 +1,7 @@
 .idea/**/workspace.xml
+*.DS_Store
 *.iml
 *.css
 *.css.map
+mysql_data/
+logs/
