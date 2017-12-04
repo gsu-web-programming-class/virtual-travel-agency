@@ -1,4 +1,6 @@
-version: '2'
+version: '3'
+networks:
+  mainnetwork:
 services:
   web:
     build: docker/php
@@ -7,9 +9,15 @@ services:
     volumes:
       - ./src/:/var/www/html
       - ./logs/:/logs/
+    links:
+      - "db:database"
+    networks:
+      - mainnetwork
   db:
-      build: docker/mysql
-      ports:
-        - "3306:3306"
-      volumes:
-        - ./mysql_data:/var/lib/mysql
+    build: docker/mysql
+    networks:
+      - mainnetwork
+    ports:
+      - "3307:3306"
+      - "3306:3306"
+
