@@ -1,8 +1,9 @@
 <?php
-    require_once( "../cart/cart.db.php" );
+    session_start();
+    require_once( "../php/controller/CartController.php" );
 
-    if ( $_SESSION[ "user_id" ] == null ) {
-        http_redirect( "../logout" );
+    if ( ! isset( $_SESSION[ "user_id" ] ) ) {
+        header( 'Location: ../logout' );
     }
 
 ?>
@@ -35,7 +36,7 @@
                         <a class="mdl-navigation__link" href="">Edit Profile</a>
                     </nav>
                     <?php
-                        $cart_item_count = get_cart_item_count_as_number();
+                        $cart_item_count = $cart_controller->get_cart_item_count();
                     ?>
                     <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-badge"
                             id="overflow-menu-button" <?php echo $cart_item_count > 0
@@ -59,7 +60,7 @@
             </header>
             <div class="mdl-layout__drawer">
                 <header>
-                    <span class="mdl-layout-title"><?php echo $_SESSION[ "user_first_name" ] ?></span>
+                    <span class="mdl-layout-title">USER NAME AND STUFF</span>
                 </header>
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="">Find Flights</a>

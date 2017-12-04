@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     require_once( realpath( dirname( __FILE__ ) ) . "/../model/User.php" );
     require_once( realpath( dirname( __FILE__ ) ) . "/../DAL.php" );
 
