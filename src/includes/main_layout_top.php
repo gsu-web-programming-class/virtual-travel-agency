@@ -51,8 +51,8 @@
             <span class="mdl-layout-title">Welcome <?php echo $user->getFirstName() ?></span>
         </header>
         <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="">Find Flights</a>
-            <a class="mdl-navigation__link" href="">Cart</a>
+            <a class="mdl-navigation__link" href="/flights">Book Flights</a>
+            <a class="mdl-navigation__link" href="/cart">Cart</a>
         </nav>
     </div>
     <main class="mdl-layout__content mdl-grid mdl-color--grey-100">
