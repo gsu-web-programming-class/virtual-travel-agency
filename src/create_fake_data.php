@@ -9,11 +9,11 @@
 
     $user_controller->create_table();
 
-    $new_user = new User( "Jo", "Ibarra", "jibarra12345" );
+    $new_user = new User( "Jo", "Ibarra", "jibarra12345", "1234" );
     $user_controller->save( $new_user );
 
-    $new_user = new User( "Hamel", "Patel", "hpatel12345" );
+    $new_user = new User( "Hamel", "Patel", "hpatel12345", "1234" );
     $user_controller->save( $new_user );
 
-    $new_user = new User( "Josh", "King", "jking82" );
+    $new_user = new User( "Josh", "King", "jking82", "1234" );
     $user_controller->save( $new_user );

@@ -21,10 +21,11 @@
             $user_first_name = $this->dal->sql_escape( $user->getFirstName() );
             $user_last_name  = $this->dal->sql_escape( $user->getLastName() );
             $user_username   = $this->dal->sql_escape( $user->getUsername() );
+            $user_password   = $this->dal->sql_escape( $user->getPassword() );
             $user_id         = $this->dal->sql_escape( $user->getId() );
 
             if ( $user_id == null ) {
-                $sql     = "INSERT INTO User (first_name, last_name, username) VALUES ('$user_first_name', '$user_last_name', '$user_username')";
+                $sql     = "INSERT INTO User (first_name, last_name, username, `password`) VALUES ('$user_first_name', '$user_last_name', '$user_username', '$user_password')";
                 $user_id = $this->dal->query( $sql );
 
                 if ( $user_id ) {
@@ -49,7 +50,7 @@
 
         public function create_table ()
         {
-            $sql = "CREATE TABLE User ( id INT NOT NULL AUTO_INCREMENT UNIQUE, first_name VARCHAR(255) NOT NULL, last_name VARCHAR(255) NOT NULL, username VARCHAR(255) NOT NULL UNIQUE)";
+            $sql = "CREATE TABLE User ( id INT NOT NULL AUTO_INCREMENT UNIQUE, first_name VARCHAR(255) NOT NULL, last_name VARCHAR(255) NOT NULL, username VARCHAR(255) NOT NULL UNIQUE, password VARCHAR(255) NOT NULL)";
             $this->dal->query( $sql );
         }
 
