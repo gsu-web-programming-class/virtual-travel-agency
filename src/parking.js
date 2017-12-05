@@ -119,7 +119,7 @@ function pricepoint(month){
     else if (month >= 5 && month <9){
         document.getElementById("demo").innerHTML = " Price $12";
     }
-    else if (month = 12){
+    else if (month == 12){
         document.getElementById("demo").innerHTML = " Price $13";
         myFunction6();
         myFunction16();
