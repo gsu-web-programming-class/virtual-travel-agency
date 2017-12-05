@@ -3,18 +3,23 @@
 
     require_once( realpath( dirname( __FILE__ ) ) . "/../php/DAL.php" );
 
-    $dal = new DAL();
-    $user_id = $dal->query("SELECT user_id FROM User WHERE username='$username', password='$password'");
-    $username = $_POST['user1'];
-    $password = $_POST['password1'];
+    // print_r( $_POST );
 
-    $_SESSION[ "user_id" ] = "3";
+    $username = $_POST[ 'username' ];
+    $password = $_POST[ 'password' ];
+    $dal      = new DAL();
+    $user_id  = $dal->query( "SELECT id FROM User WHERE username='$username' and  `password`='$password'" );
+
+    // print_r( $user_id[0]->id );
+
+    $_SESSION[ "user_id" ] = $user_id[ 0 ]->id;
     //$_SESSION[ "username" ] = $username;
     //$_SESSION[ "password" ] = $password;
 
-    if (isset( $_SESSION[ "user_id" ] )) {
-        header("Location: /");
-    }
+    // Redirecting is already handled on the client.
+    // if ( ! empty( $_SESSION[ "user_id" ] ) ) {
+    header( "Location: /" );
+    // }
 
     //establish a connection to our db
     //$connection = mysql_connect("localhost", "root", "");
@@ -26,4 +31,3 @@
     //  echo "form submitted successfully";
     //}
     //mysql_close($connection);
-?>
