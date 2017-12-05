@@ -3,5 +3,6 @@
 *.iml
 *.css
 *.css.map
+!/src/material.css
 mysql_data/
 logs/

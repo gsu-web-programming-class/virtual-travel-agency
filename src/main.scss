@@ -1,4 +1,5 @@
 /* MAIN */
+@import "material_colors";
 
 dialog::backdrop {
   background-color : rgba(0, 0, 0, 0.5);
@@ -27,6 +28,40 @@ dialog::backdrop {
   @at-root button#{&} {
     &:after {
       right : -10px !important;
+    }
+  }
+}
+
+.mdl-layout__drawer {
+  header {
+    .mdl-layout-title {
+      padding    : 40px;
+      margin-top : 30px;
+    }
+  }
+}
+
+.mdl-layout--fixed-drawer > main.mdl-layout__content {
+  @media screen and (max-width : 1024px) {
+    width : 100%;
+  }
+
+  width   : calc(100% - 240px);
+  padding : 0;
+}
+
+.mdl-layout__header {
+  -webkit-transition : all 250ms ease;
+  -moz-transition    : all 250ms ease;
+  -o-transition      : all 250ms ease;
+  transition         : all 250ms ease;
+
+  &:not(.is-casting-shadow) {
+    background-color : $grey-100 !important;
+    color            : $grey-600 !important;
+
+    .mdl-layout__drawer-button {
+      color : $grey-600 !important;
     }
   }
 }

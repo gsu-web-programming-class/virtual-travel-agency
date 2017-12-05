@@ -1,10 +1,4 @@
 <?php
-    /**
-     * Created by PhpStorm.
-     * User: joshuaking
-     * Date: 12/3/17
-     * Time: 16:38
-     */
 
     class User
     {
@@ -25,6 +19,16 @@
             $this->first_name = $first_name;
             $this->last_name  = $last_name;
             $this->username   = $username;
+        }
+
+        /** @noinspection PhpUndefinedFieldInspection */
+        public static function from_query_result ( DALQueryResult $dal_user )
+        {
+            $first_name = $dal_user->first_name;
+            $last_name  = $dal_user->last_name;
+            $username   = $dal_user->username;
+
+            return new User( $first_name, $last_name, $username );
         }
 
         public function getFirstName ()

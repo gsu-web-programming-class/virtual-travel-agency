@@ -17,7 +17,6 @@
 
         function save ( User $user )
         {
-            $conn = $this->dal->connect();
             // $user_first_name = $this->dal->sql_escape( $conn, $user->getFirstName() );
             // $user_last_name  = $this->dal->sql_escape( $conn, $user->getLastName() );
             // $user_username   = $this->dal->sql_escape( $conn, $user->getUsername() );
@@ -51,9 +50,8 @@
 
         public function create_table ()
         {
-            $conn = $this->dal->connect();
             $sql  = "CREATE TABLE User ( id INT NOT NULL AUTO_INCREMENT UNIQUE, user_id INT NOT NULL UNIQUE)";
-            $this->dal->query( $conn, $sql );
+            $this->dal->query( $sql );
         }
 
 
