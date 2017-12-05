@@ -20,8 +20,22 @@
     }
     #profile-card {
       position : absolute;
-      top      : 90px;
+      top      : 70px;
       margin   : 0;
+
+      .mdl-card__title {
+        height : 150px;
+      }
+
+      .row-with-chip {
+        display     : flex;
+        align-items : center;
+
+        .row-with-chip__title {
+          font-weight  : 700;
+          margin-right : 10px;
+        }
+      }
     }
     #profile-content-parent {
       width : 100%;
