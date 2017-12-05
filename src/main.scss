@@ -41,6 +41,14 @@ dialog::backdrop {
   }
 }
 
+footer {
+  margin-left : 240px;
+
+  @media screen and (max-width : 1024px) {
+    margin-left : 0;
+  }
+}
+
 .mdl-layout--fixed-drawer > main.mdl-layout__content {
   @media screen and (max-width : 1024px) {
     width : 100%;
