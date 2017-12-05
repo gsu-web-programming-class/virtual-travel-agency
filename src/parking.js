@@ -113,10 +113,10 @@ function isNumberKey(evt) {
     return true;
 }
 function pricepoint(month){
-    if (month >= 1 || month <5){
+    if (month >= 1 && month <5){
         document.getElementById("demo").innerHTML = "10";
     }
-    else if (month >= 5 || month <9){
+    else if (month >= 5 && month <9){
         document.getElementById("demo").innerHTML = "12";
     }
     else if (month = 12){
