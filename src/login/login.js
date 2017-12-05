@@ -2,7 +2,7 @@ function init() {
     // document is loaded here
     var user = document.getElementById("username").value;
     var password = document.getElementById("password").value;
-    var dataString = 'user1=' +user+ '&password1=' +password;
+    var dataString = 'username=' + user + '&password=' + password;
 
     if (!jQuery('#username').val()) {
         alert('Please fill in the username field');
