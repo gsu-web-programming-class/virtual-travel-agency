@@ -21,7 +21,7 @@
             <span class="mdl-layout-title"><?php echo $page_name; ?></span>
             <div class="mdl-layout-spacer"></div>
             <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" id="view-profile-btn" href="">View Profile</a>
+                <a class="mdl-navigation__link" id="view-profile-btn" href="/profile">View Profile</a>
             </nav>
             <?php
                 $cart_item_count = $cart_controller->get_cart_item_count();
