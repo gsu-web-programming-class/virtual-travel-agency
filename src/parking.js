@@ -172,6 +172,6 @@ function pricepoint(month){
     }
 }
 function printArray(){
-    document.getElementById("demo").innerHTML = "Spots Reserved:"+spotselect;
+    document.getElementById("demo2").innerHTML = "Spots Reserved:"+spotselect;
 
 }
