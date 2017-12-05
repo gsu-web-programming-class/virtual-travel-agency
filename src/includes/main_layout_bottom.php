@@ -5,7 +5,7 @@
         <ul class="mdl-mini-footer__link-list">
             <li><a href="/cart">View Cart</a></li>
             <li><a href="/about">About</a></li>
-            <li><a href="/logout">Locgout</a></li>
+            <li><a href="/logout">Logout</a></li>
         </ul>
     </div>
 </footer>

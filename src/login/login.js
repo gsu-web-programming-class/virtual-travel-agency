@@ -4,10 +4,10 @@ function init() {
     var password = document.getElementById("password").value;
     var dataString = 'user1=' +user+ '&password1=' +password;
 
-    if (!jQuery('#form #username').val() ) {
+    if (!jQuery('#username').val()) {
         alert('Please fill in the username field');
 
-    }else if (!jQuery('#form #password').val() ) {
+    } else if (!jQuery('#password').val()) {
         alert('Please fill in the password field');
 
     } else {
@@ -18,7 +18,7 @@ function init() {
             data: dataString,
             cache: false,
             success: function() {
-                window.location.href = "profile/index.html";
+                window.location.href = "/";
             }
         });
     }
