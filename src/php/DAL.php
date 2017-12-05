@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     class DALQueryResult
     {
 
@@ -33,39 +33,39 @@
 
         public function drop_table ( $table_name )
         {
-            $conn       = $this->dbconnect();
-            $table_name = $this->sql_escape( $table_name, $conn );
+            $conn       = $this->connect();
+            $table_name = $this->sql_escape( $conn, $table_name );
 
-            return $this->query( "DROP TABLE IF EXISTS " . $table_name, $conn );
+            return $this->query( $conn, "DROP TABLE IF EXISTS " . $table_name );
         }
 
-        private function dbconnect ()
+        public function connect ()
         {
-            $DB_HOST     = "localhost";
+            $DB_HOST     = "virtualtravelagency_db_1";
             $DB_USER     = "virtualtravelagency";
             $DB_PASSWORD = "virtualtravelagency";
             $DB_DB       = "virtualtravelagency";
 
-            $conn = mysql_connect( $DB_HOST, $DB_USER, $DB_PASSWORD )
+            $conn = mysqli_connect( $DB_HOST, $DB_USER, $DB_PASSWORD )
             or die ( "<br/>Could not connect to MySQL server" );
 
-            mysql_select_db( $DB_DB, $conn )
+            mysqli_select_db( $conn, $DB_DB )
             or die ( "<br/>Could not select the indicated database" );
 
             return $conn;
         }
 
-        public function sql_escape ( $var, $conn )
+        public function sql_escape ( $conn, $var )
         {
-            $post = mysql_real_escape_string( $var, $conn );
+            $post = mysqli_real_escape_string( $conn, $var );
 
             return $post;
         }
 
-        public function query ( $sql, $conn )
+        public function query ( $conn, $sql )
         {
 
-            $res = mysql_query( $sql );
+            $res = mysqli_query( $conn, $sql );
 
             if ( $res ) {
                 if ( strpos( $sql, 'SELECT' ) === false && strpos( $sql, 'INSERT' ) === false ) {
@@ -82,10 +82,10 @@
             $results = [];
 
             if ( ! ( strpos( $sql, 'INSERT' ) === false ) ) {
-                return mysql_insert_id( $conn );
+                return mysqli_insert_id( $conn );
             }
 
-            while ( $row = mysql_fetch_array( $res ) ) {
+            while ( $row = mysqli_fetch_array( $res ) ) {
 
                 $result = new DALQueryResult();
 
@@ -99,4 +99,5 @@
             return $results;
         }
     }
- 
+
+    $dal = new DAL();

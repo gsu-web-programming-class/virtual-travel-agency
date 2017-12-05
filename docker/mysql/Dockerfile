@@ -1,7 +1,6 @@
-FROM mysql/mysql-server:latest
+FROM mysql
 
-ENV MYSQL_USER=virtualtravelagency
-ENV MYSQL_PASSWORD=virtualtravelagency
-ENV MYSQL_DATABASE=virtualtravelagency
-ENV MYSQL_ROOT_PASSWORD=root
-#ENV MYSQL_ALLOW_EMPTY_PASSWORD="yes"
+ENV MYSQL_USER=virtualtravelagency \
+    MYSQL_PASSWORD=virtualtravelagency \
+    MYSQL_DATABASE=virtualtravelagency \
+    MYSQL_ROOT_PASSWORD=root
