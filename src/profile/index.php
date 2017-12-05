@@ -1,76 +1,86 @@
 <?php
     session_start();
-    require_once( "../php/controller/CartController.php" );
-
-    if ( ! isset( $_SESSION[ "user_id" ] ) ) {
-        header( 'Location: ../logout' );
-    }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <title>VTA - Profile</title>
+        <?php
+            $page_name = "Profile";
+            require( "../includes/head_template.php" );
+        ?>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <link rel="stylesheet"
-              href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-orange.min.css" />
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="../material.css" />
         <script type="text/javascript" src="profile.js"></script>
         <link rel="stylesheet" href="../main.css" />
         <link rel="stylesheet" href="profile.css" />
     </head>
     <body id="profile">
-        <div id="main-parent-layout"
-             class="mdl-layout mdl-js-layout  mdl-layout--fixed-drawer mdl-layout--fixed-header">
-            <header class="mdl-layout__header mdl-layout__header--transparent">
-                <div class="mdl-layout__header-row">
-                    <span class="mdl-layout-title">Profile</span>
-                    <div class="mdl-layout-spacer"></div>
-                    <nav class="mdl-navigation">
-                        <a class="mdl-navigation__link" href="">Edit Profile</a>
-                    </nav>
-                    <?php
-                        $cart_item_count = $cart_controller->get_cart_item_count();
-                    ?>
-                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-badge"
-                            id="overflow-menu-button" <?php echo $cart_item_count > 0
-                        ? "data-badge=\"$cart_item_count\"" : "" ?>>
-                        <i class="material-icons">more_vert</i>
-                    </button>
-                    <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right"
-                        for="overflow-menu-button">
-                        <li class="mdl-menu__item">
-                            <a href="../cart" class="mdl-badge" <?php echo $cart_item_count > 0
-                                ? "data-badge=\"$cart_item_count\"" : "" ?>>View Cart</a>
-                        </li>
-                        <li class="mdl-menu__item">
-                            <a href="../about">About VTA</a>
-                        </li>
-                        <li class="mdl-menu__item">
-                            <a href="../logout">Logout</a>
-                        </li>
-                    </ul>
-                </div>
-            </header>
-            <div class="mdl-layout__drawer">
-                <header>
-                    <span class="mdl-layout-title">USER NAME AND STUFF</span>
-                </header>
-                <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" href="">Find Flights</a>
-                    <a class="mdl-navigation__link" href="">Cart</a>
-                </nav>
+        <?php require( "../includes/main_layout_top.php" ) ?>
+        <div id="profile-pre-content-padding" class="mdl-color--grey-100"></div>
+        <div id="profile-card" class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell mdl-cell--10-col">
+            <div class="mdl-card__title mdl-card--expand mdl-color--accent mdl-color-text--accent-contrast">
+                <span class="mdl-card__title-text"><?php echo $user->getFirstName() . " " . $user->getLastName() ?></span>
             </div>
-            <main class="mdl-layout__content">
+            <div class="mdl-card__media">
 
-            </main>
+            </div>
+            <div class="mdl-card__supporting-text">
+                <?php
+                    $user_address = $user->getAddress();
+                    $user_email   = $user->getEmail();
+                    $user_phone   = $user->getPhone();
+                ?>
+                <?php if ( ! empty( $user_address ) ) { ?>
+                    <div class="row-with-chip">
+                        <span class="row-with-chip__title">Address:</span>
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">
+                                <?php echo $user_address ?>
+                            </span>
+                        </span>
+                    </div>
+                <?php } ?>
+                <?php if ( ! empty( $user_email ) ) { ?>
+                    <div class="row-with-chip">
+                        <span class="row-with-chip__title">Email:</span>
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">
+                                <?php echo $user_email ?>
+                            </span>
+                        </span>
+                    </div>
+                <?php } ?>
+                <?php if ( ! empty( $user_phone ) ) { ?>
+                    <div class="row-with-chip">
+                        <span class="row-with-chip__title">Phone:</span>
+                        <span class="mdl-chip">
+                            <span class="mdl-chip__text">
+                                <?php echo $user_phone ?>
+                            </span>
+                        </span>
+                    </div>
+                <?php } ?>
+            </div>
+            <div class="mdl-card__actions">
+                <?php if ( ! empty( $user_email ) ) { ?>
+                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+                       href="mailto:<?php echo $user_email ?>">
+                        <i class="material-icons">email</i>
+                        Email
+                    </a>
+                <?php } ?>
+                <?php if ( ! empty( $user_phone ) ) { ?>
+                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+                       href="tel:<?php echo $user_phone ?>">
+                        <i class="material-icons">call</i>
+                        Call
+                    </a>
+                <?php } ?>
+            </div>
         </div>
-        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <div id="profile-content-parent">
+
+        </div>
+        <?php require( "../includes/main_layout_bottom.php" ) ?>
     </body>
 </html>

@@ -1,8 +1,44 @@
 /* PROFILE */
+@import "../material_colors";
 
 #profile {
   #main-parent-layout {
-    background : url('img/city_abstract_1.jpg') center / cover;
     min-height : 100vh;
+  }
+  #view-profile-btn {
+    display : none;
+  }
+
+  main {
+    align-items     : start;
+    justify-content : center;
+    background      : $blue-grey-100 !important;
+
+    #profile-pre-content-padding {
+      width  : 100%;
+      height : 150px;
+    }
+    #profile-card {
+      position : absolute;
+      top      : 70px;
+      margin   : 0;
+
+      .mdl-card__title {
+        height : 150px;
+      }
+
+      .row-with-chip {
+        display     : flex;
+        align-items : center;
+
+        .row-with-chip__title {
+          font-weight  : 700;
+          margin-right : 10px;
+        }
+      }
+    }
+    #profile-content-parent {
+      width : 100%;
+    }
   }
 }
