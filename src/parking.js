@@ -1,5 +1,5 @@
 var spotselect= [];
-var price=;
+var price=0;
 function myFunction1() {
     document.getElementById("button1").disabled = true;
     spotselect.push("Spot 1 Reserved ");
