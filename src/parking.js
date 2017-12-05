@@ -114,13 +114,13 @@ function isNumberKey(evt) {
 }
 function pricepoint(month){
     if (month >= 1 && month <5){
-        document.getElementById("demo").innerHTML = "10";
+        document.getElementById("demo").innerHTML = " Price $10";
     }
     else if (month >= 5 && month <9){
-        document.getElementById("demo").innerHTML = "12";
+        document.getElementById("demo").innerHTML = " Price $12";
     }
     else if (month = 12){
-        document.getElementById("demo").innerHTML = "13";
+        document.getElementById("demo").innerHTML = " Price $13";
         myFunction6();
         myFunction16();
         myFunction3();
@@ -130,7 +130,7 @@ function pricepoint(month){
         myFunction12();
         myFunction1();
     }
-    else{
+    else if( month >= 9 && month < 12 ){
         document.getElementById("demo").innerHTML = "13";
     }
 
