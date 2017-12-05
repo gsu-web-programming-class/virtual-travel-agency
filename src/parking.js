@@ -179,6 +179,7 @@ function pricepoint(month){
 function printArray(){
     var a= spotselect.length;
     var c= price *a;
-    document.getElementById("demo2").innerHTML = "Spots Reserved: "+ spotselect  +  " Total Price: $" + c;
+    document.getElementById("demo2").innerHTML = "Spots Reserved: "+ spotselect;
+    document.getElementById("demo3").innerHTML =  " Total Price: $" + c;
 
 }
