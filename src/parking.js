@@ -1,4 +1,5 @@
 var spotselect= [];
+var price=;
 function myFunction1() {
     document.getElementById("button1").disabled = true;
     spotselect.push("Spot 1 Reserved ");
@@ -152,9 +153,11 @@ function isNumberKey(evt) {
 function pricepoint(month){
     if (month >= 1 && month <5){
         document.getElementById("demo").innerHTML = " Price Per Spot: $10";
+         price=10;
     }
     else if (month >= 5 && month <9){
         document.getElementById("demo").innerHTML = " Price Per Spot: $12";
+        price=12;
     }
     else if (month == 12){
         document.getElementById("demo").innerHTML = " Price $13";
@@ -166,12 +169,16 @@ function pricepoint(month){
         document.getElementById("button20").disabled = true;
         document.getElementById("button12").disabled = true;
         document.getElementById("button1").disabled = true;
+        price=13;
     }
     else if( month >= 9 && month < 12 ){
         document.getElementById("demo").innerHTML = "Price Per Spot: $13";
+        price=13;
     }
 }
 function printArray(){
-    document.getElementById("demo2").innerHTML = "Spots Reserved: "+ spotselect;
+    var a= spotselect.length;
+    var c= price *a;
+    document.getElementById("demo2").innerHTML = "Spots Reserved: "+ spotselect  +  "Total Price:" + c;
 
 }
