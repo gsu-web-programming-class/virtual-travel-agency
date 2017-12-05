@@ -1,26 +1,30 @@
 <?php
     session_start();
-    class parkDB
-       {
-           private $conn;
+    class parkdb
+    {
+        private $conn;
 
-           public function __construct ()
-           {
-               $this->connect();
-           }
+        public function __construct ()
+        {
+            $this->connect();
+        }
 
-           private function connect ()
-           {
-               $DB_HOST     = "virtualtravelagency_db_1";
-               $DB_USER     = "virtualtravelagency";
-               $DB_PASSWORD = "virtualtravelagency";
-               $DB_DB       = "virtualtravelagency";
+        private function connect ()
+        {
+            $DB_HOST     = "virtualtravelagency_db_1";
+            $DB_USER     = "virtualtravelagency";
+            $DB_PASSWORD = "virtualtravelagency";
+            $DB_DB       = "virtualtravelagency";
 
-               $this->conn = mysqli_connect( $DB_HOST, $DB_USER, $DB_PASSWORD )
-               or die ( "<br/>Could not connect to MySQL server" );
+            $this->conn = mysqli_connect( $DB_HOST, $DB_USER, $DB_PASSWORD )
+            or die ( "<br/>Could not connect to MySQL server" );
 
-               mysqli_select_db( $this->conn, $DB_DB )
-               or die ( "<br/>Could not select the indicated database" );
-           }
+            mysqli_select_db( $this->conn, $DB_DB )
+            or die ( "<br/>Could not select the indicated database" );
 
-  $parkdb = new parkDB();
+
+
+        }
+
+    }
+    $parkDB = new parkdb();

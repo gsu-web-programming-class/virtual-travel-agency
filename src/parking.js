@@ -106,9 +106,12 @@ function myFunction35() {
 function myFunction36() {
     document.getElementById("button36").disabled = true;
 }
-function isNumberKey(evt){
+function isNumberKey(evt) {
     var charCode = (evt.which) ? evt.which : event.keyCode
     if (charCode > 31 && (charCode < 48 || charCode > 57))
         return false;
     return true;
+}
+function pricepoint(){
+
 }

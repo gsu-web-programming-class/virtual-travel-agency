@@ -9,7 +9,7 @@
         private $spot;
 
 
-        public function __construct ( $month, $day, $year, $price, $spots)
+        public function __construct ( $month, $day, $year, $price, $spot)
         {
             $this->month = $month;
             $this->day  = $day;
@@ -52,7 +52,7 @@
 
         public function getspot ()
         {
-            return $this->spor;
+            return $this->spot;
         }
 
         public function setspot ( $spot )
@@ -61,4 +61,4 @@
         }
 
     }
-?>
+

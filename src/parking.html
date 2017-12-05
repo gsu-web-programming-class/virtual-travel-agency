@@ -6,7 +6,8 @@
 </head>
 <body>
 <div>
-  <p> Select the date you want to reserve parking for to check availability: (mm/dd/yy) <input name="month" onkeypress="return isNumberKey(event)" type="text" size="2" /> <input name="day" onkeypress="return isNumberKey(event)" type="text" size="2" /> <input name="year" onkeypress="return isNumberKey(event)" type="text" size="2" />  <input type="submit" value="Submit" name="submit" /></p>
+  <p> Select the date you want to reserve parking for to check availability: (mm/dd/yy) <input name="month" onkeypress="return isNumberKey(event)" type="text" size="2" /> <input name="day" onkeypress="return isNumberKey(event)" type="text" size="2" /> <input name="year" onkeypress="return isNumberKey(event)" type="text" size="2" />  <input type="submit" value="Submit" onclick="pricepoint()"name="submit" /></p>
+    <p> Price $  <p id="demo"></p></p>
 </div>
 <table>
   <tr>
