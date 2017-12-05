@@ -1,6 +1,5 @@
 function init() {
     // document is loaded here
-    var xhttp = new XMLHttpRequest();
     var user = document.getElementById("username").value;
     var password = document.getElementById("password").value;
     var dataString = 'user1=' +user+ '&password1=' +password;
