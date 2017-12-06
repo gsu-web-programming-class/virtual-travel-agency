@@ -59,7 +59,7 @@
 
         public function find_by_id ( $user_id )
         {
-            $sql    = "SELECT * from User WHERE id like '$user_id'";
+            $sql    = "SELECT * from User WHERE id='$user_id'";
             $result = $this->dal->query( $sql )[ 0 ];
 
             return User::from_query_result( $result );

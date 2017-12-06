@@ -9,23 +9,24 @@
         private $spot;
 
 
-        public function __construct ( $month, $day, $year, $price, $spot)
+        public function __construct ( $month, $day, $year, $price, $spot )
         {
             $this->month = $month;
-            $this->day  = $day;
+            $this->day   = $day;
             $this->year  = $year;
-            $this->price  = $price;
-            $this->spot   = $spot;
+            $this->price = $price;
+            $this->spot  = $spot;
         }
 
         /** @noinspection PhpUndefinedFieldInspection */
         public static function from_query_result ( parkerQueryResult $parker_user )
         {
-            $month  = $parker_user->month;
-            $day    = $parker_user->day;
-            $year   = $parker_user->year;
-            $price  = $parker_user->price;
-            $spot   = $parker_user->spot;
+            $month = $parker_user->month;
+            $day   = $parker_user->day;
+            $year  = $parker_user->year;
+            $price = $parker_user->price;
+            $spot  = $parker_user->spot;
+
             return new parker( $month, $day, $year, $price, $spot );
         }
 

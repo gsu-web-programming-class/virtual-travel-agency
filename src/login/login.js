@@ -4,10 +4,10 @@ function init() {
     var password = document.getElementById("password").value;
     var dataString = 'username=' + user + '&password=' + password;
 
-    if (!jQuery('#username').val()) {
+    if (username.length === 0) {
         alert('Please fill in the username field');
 
-    } else if (!jQuery('#password').val()) {
+    } else if (password.length === 0) {
         alert('Please fill in the password field');
 
     } else {

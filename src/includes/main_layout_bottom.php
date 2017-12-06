@@ -1,9 +1,9 @@
-</main>
 <footer class="mdl-mini-footer">
     <div class="mdl-mini-footer__left-section">
-        <div class="mdl-logo">Virtual Travel Agency</div>
+        <div class="mdl-logo">&copy; Web Programming Back Row, LLC</div>
         <ul class="mdl-mini-footer__link-list">
             <li><a href="/cart">View Cart</a></li>
+            <li><a href="/parking">Reserve Parking</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/logout">Logout</a></li>
         </ul>

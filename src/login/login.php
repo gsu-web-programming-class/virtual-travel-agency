@@ -10,7 +10,7 @@
     $dal      = new DAL();
     $user_id  = $dal->query( "SELECT id FROM User WHERE username='$username' and  `password`='$password'" );
 
-    $_SESSION[ "user_id" ] = $user_id[ 0 ]->id;
+    $_SESSION[ "user_id" ] = (int) $user_id[ 0 ]->id;
     //$_SESSION[ "username" ] = $username;
     //$_SESSION[ "password" ] = $password;
 

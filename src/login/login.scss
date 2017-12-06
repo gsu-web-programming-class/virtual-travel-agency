@@ -1,1 +1,15 @@
 /* LOGIN */
+
+#loginform {
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+  align-content   : center;
+  height          : 100vh;
+  flex-direction  : column;
+
+  > div {
+    padding : 20px;
+    width   : 400px;
+  }
+}

@@ -11,20 +11,50 @@
         <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-orange.min.css" />
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="../material.css" />
         <script type="text/javascript" src="login.js"></script>
         <link rel="stylesheet" href="../main.css" />
         <link rel="stylesheet" href="login.css" />
     </head>
     <body>
-        <div id="loginform" align="center">
-            <h1>Log in to our Virtual Travel Advisor</h1>
-            <form id="form" action="login.php" method="post">
-                <label>Username:</label>
-                <input type="text" id="username" name="username"><br>
-                <label>Password:</label>
-                <input type="password" id="password" name="password" /><br><br>
-                <input type="submit" value="Login" />
-            </form>
+        <div id="loginform" class="mdl-color--blue-grey-200" align="center">
+            <div class="mdl-card mdl-shadow--4dp">
+                <h1>Log in</h1>
+                <form id="form" action="login.php" method="post">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input required
+                               class="mdl-textfield__input"
+                               type="text"
+                               name="username"
+                               pattern=".+"
+                               id="username">
+                        <label class="mdl-textfield__label" for="username">Username</label>
+                        <span class="mdl-textfield__error">Please provide a Username</span>
+                    </div>
+                    <br>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input required
+                               class="mdl-textfield__input"
+                               type="password"
+                               name="password"
+                               pattern=".+"
+                               id="password">
+                        <label class="mdl-textfield__label" for="password">Password</label>
+                        <span class="mdl-textfield__error">Please provide a Password</span>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <button type="submit"
+                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                        Login
+                    </button>
+                </form>
+            </div>
+            <br>
+            <br>
+
+            <p>&copy; Web Programming Back Row, LLC</p>
         </div>
         <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     </body>

@@ -1,5 +1,6 @@
 <?php
     session_start();
+
     class parkdb
     {
         private $conn;
@@ -23,8 +24,8 @@
             or die ( "<br/>Could not select the indicated database" );
 
 
-
         }
 
     }
+
     $parkDB = new parkdb();
